@@ -42,13 +42,13 @@
 
 		
 
-			<section id="log">
+		<section id="log">
 
-				<div class="log">
+			<div class="log">
 
 				<article>
 
-						<form action="../controller/autenticar.php" method="post">
+					<form action="../controller/autenticar.php" method="post">
 
 						<fieldset>
 
@@ -113,8 +113,13 @@
 
 				</article>
 
-				</div>
-			</section>
+			</div>
+
+		</section>
+
+		
+
+
 
 		
 		

@@ -1,7 +1,7 @@
 <?php 
 
 	include '../dao/UsuarioBD.class.php';
-	include '../html/pageCadastroUsuario.php';
+	include '../html/page_header.php';
 	
 	
 	$nome = $_POST["nomeUsuario"];

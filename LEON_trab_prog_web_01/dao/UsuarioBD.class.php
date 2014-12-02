@@ -48,13 +48,14 @@
 				
 				$queryInsertUser->execute();
 
-
-				echo "Usuário inserido com sucesso!";
+				echo "<script>alert('Usuário inserido com sucesso!');</script>";
+				
 			
 			}
 			else{
 
-				echo "Esta conta de e-mail já está cadastrada!";
+				echo "<script>alert('ERRO     Esta conta de e-mail já está cadastrada!');</script>";
+				header("refresh:5; url=../html/page_header.php");
 
 			}
 
