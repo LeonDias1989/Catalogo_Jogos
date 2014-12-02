@@ -200,10 +200,25 @@
 			$this->conexaoBD->desconectar();
 		}
 
+		function deletarUsuario($usuario){
+
+			$this->conexaoBD->conectar();
+			$stm = $this->conexaoBD->getPDO();
+
+			$queryDeleteUser = $stm->prepare("DELETE FROM usuario WHERE email = :email");
+			$queryDeleteUser->bindValue("email", $usuario->__get("email"));
+			$queryDeleteUser->execute();
+
+			if($queryDeleteUser->rowCount() > 0){ echo "O usuário foi excluido com êxito";}
+				else
+					echo "Não foi possível excluir o usuário!";
+
+			$this->conexaoBD->desconectar();
+
+		}
+
 		
 
 	}
-
-
 	
  ?>

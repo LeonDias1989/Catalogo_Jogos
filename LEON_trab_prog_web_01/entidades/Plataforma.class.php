@@ -11,12 +11,14 @@
 		
 		private $nome;
 		private $data_lancamento;
+		private $geracao;
 
-		function __construct($nome="", $data_lancamento="")
+		function __construct($nome="", $data_lancamento="", $geracao="")
 		{
 			
 			$this->nome = $nome;
 			$this->data_lancamento = $data_lancamento;
+			$this->geracao = $geracao;
 		}
 
 		function __get($atributo){
@@ -31,7 +33,7 @@
 
 		function __toString(){
 
-			return "Nome: " .$this->nome ."<br/>Data de Lançamento: " .$this->data_lancamento;
+			return "Nome: " .$this->nome ."<br/>Data de Lançamento: " .$this->data_lancamento  ."<br/>Geração: " .$this->geracao;
 		}
 	}
 
