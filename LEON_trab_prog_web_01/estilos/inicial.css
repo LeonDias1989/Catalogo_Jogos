@@ -1,0 +1,152 @@
+* {
+	margin: 0px;
+}
+
+body {
+	font-family: Arial, Verdana, sans-serif;
+	color: #000;
+}
+
+header {
+	width: 100%;
+	height: 80px;
+	background-color: #000;
+}
+	
+	/*Criando uma classe área para configurar a div no documento HTML*/
+	header .area {
+		
+		width: 940px;
+		height: 100%;
+		margin: auto;
+	}
+
+		header .area h1 {
+			color: #fff;
+			font-size: 16px;
+			padding-top: 32px;
+			float: left;
+		}
+
+		/*Deixando o Navigator para a esquerda*/
+		header nav {
+			float: right;
+		}
+
+			/*Configurando a lista*/
+			header nav ul li {
+				display: inline-block;
+				width: 118px;
+				text-align: center;
+				padding-top: 4px;
+			}
+				
+				/*Configurando os links da lista*/
+				header nav ul li a {
+					color: #999;
+					text-decoration: none;
+					font-size: 12px;
+					font-weight: bold; 
+					border-top: 4px solid #999;
+					display: block;
+					width: 100%;
+					height: 100%;
+					padding-top: 30px;
+				}
+
+				
+				/*Quando estiver com o mouse por cima do texto*/
+				header nav ul li a:hover {
+					color: #fff;
+					border-top: 4px dashed #fff;
+				}
+
+
+				main {
+					width: 940px;
+					height: 1300px;
+					margin: auto;
+				}
+
+					section#titulo {
+					width: 100%;
+					height: 125px;
+					}
+
+					section#titulo h1 {
+						float: center;
+						font-size: 15px;
+						text-align: center;
+						padding-top: 35px;
+					}
+
+					section#log{
+
+						width: 100%;
+						height: 150px;
+					}
+
+					section#log article {
+
+						width: 50%;
+						height: 100%;
+						float: left;
+						text-align: center;
+						padding-top: 30px;
+					}
+
+					main .log {
+		
+					width: 100%;
+					height: 100%;
+					margin: auto;
+
+					}	
+
+					main .log form{
+
+						display: inline-block;
+
+					}
+
+					main .log label {
+						
+						color: #000;
+						font-size: 15px;
+						float: left;
+						
+					}
+
+					main .log input[type="email"] {
+					  
+					 float: right;
+					
+					  
+					}
+
+					main .log input[type="password"] {
+					  
+					  float: right;
+					  
+					}
+
+					main .log input[type="text"] {
+					  
+					  float: right;
+					  
+					}
+
+					
+
+					
+
+		
+footer {
+	width: 100%;
+	height: 200px;
+	background-color: #000;
+}		
+		
+		
+
+			
