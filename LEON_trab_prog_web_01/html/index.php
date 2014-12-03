@@ -1,36 +1,8 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-	<title>Catálogo de Jogos</title>
-	<meta charset="UTF-8">
+﻿<?php 
 
-	<style type="text/css">
-		@import "../estilos/inicial.css";
-	</style>
+	include "../html/header.php";
 
-
-</head>
-<body>
-
-	<header>
-		
-		<div class="area">
-			<h1>Catálogo de Jogos</h1>
-		
-			<nav>
-				
-				<ul>
-
-					<li><a href="#">Cadastra-se</a></li>
-					<li><a href="#">Iniciar Sessão</a></li>
-
-				</ul>
-
-		
-			</nav>
-		</div>
-
-	</header>
+ ?>
 
 	<main>
 
@@ -193,29 +165,8 @@
 
 	</section>
 
-		
-
-
-
-		
-		
-
-
 	</main>	
 
+	</body>
 
-	<footer>
-
-
-	</footer>
-
-
-
-
-
-
-
-	
-
-</body>
 </html>

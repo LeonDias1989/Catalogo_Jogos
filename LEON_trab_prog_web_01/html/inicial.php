@@ -1,11 +1,21 @@
-<html>
-<head>
-	<title>Página Inicial</title>
-</head>
-<body>
+<?php 
+	
+	include "../html/header2.php";
+
+ ?>
 
 
-	<h1>Logado com Sucesso!</h1>
+
+	<main>
+
+
+	</main>
+
+<?php 
+
+	include "../html/footer.php";
+
+ ?>
 
 </body>
 </html>
