@@ -63,51 +63,39 @@ header {
 
 
 				main {
-					width: 940px;
-					height: 1300px;
+					width: 80%;
+					height: 80%;
 					margin: auto;
 				}
 
 					section#titulo {
 					width: 100%;
-					height: 125px;
+					height: 40px;
 					}
 
 					section#titulo h1 {
 						float: left;
 						font-size: 15px;
 						text-align: center;
-						padding-top: 35px;
+						
 					}
 
 					section#log{
 
 						width: 100%;
-						height: 200px;
+						height: 400px;
 					}
 
 					section#log article {
 
 						width: 50%;
-						height: 100%;
+						height: 50%;
 						float: left;
 						text-align: center;
 						padding-top: 30px;
 					}
 
-					main .log {
-		
-					width: 100%;
-					height: 100%;
-					margin: auto;
-
-					}	
-
-					main .log form{
-
-						display: inline-block;
-
-					}
+					
 
 					main .log label {
 						
@@ -136,19 +124,34 @@ header {
 					  
 					}
 
-					
+					section#imagens{
+
+						width: 100%;
+						height: 350px;
+					}
+
+
+					section#imagens article figure img{
+
+						width: 25%;
+						height: 100%;
+						float: left;
+						
+					}
+
+					footer{
+
+						width: 100%;
+						height: 200px;
+						background-color: #000;
+					}
 
 					
 
 					
 
-		
-footer {
-	width: 100%;
-	height: 400px;
-	background-color: #000;
-}		
-		
+					
+
 		
 
 			

@@ -114,8 +114,84 @@
 				</article>
 
 			</div>
-
+		
 		</section>
+		<!--
+			Aqui encerra a sessão de logs
+		-->
+
+		<section id="imagens">
+
+			<article>
+
+				<figure>
+
+					<img src="../imgs/gears.jpg">
+
+				</figure>
+
+			</article>
+
+			<article>
+
+				<figure>
+
+					<img src="../imgs/gta5.jpg">
+
+				</figure>
+
+			</article>
+
+			
+			<article>
+				<figure>
+
+					<img src="../imgs/max.jpg">
+
+				</figure>
+			</article>
+
+			<article>
+				<figure>
+
+					<img src="../imgs/mg4.jpg">
+
+				</figure>
+			</article>
+
+			<article>
+				<figure>
+
+					<img src="../imgs/crash.jpg">
+
+				</figure>
+			</article>
+
+			<article>
+				<figure>
+
+					<img src="../imgs/ff9.jpg">
+
+				</figure>
+			</article>
+
+			<article>
+				<figure>
+
+					<img src="../imgs/gt6.jpg">
+
+				</figure>
+			</article>
+
+			<article>
+				<figure>
+
+					<img src="../imgs/mario.png">
+
+				</figure>
+			</article>
+
+	</section>
 
 		
 
