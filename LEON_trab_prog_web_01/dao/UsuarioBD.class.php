@@ -118,6 +118,37 @@
 
 		}
 
+
+		function alterarDados($usuario){
+
+			$this->conexaoBD->conectar();
+			$stm = $this->conexaoBD->getPDO();
+
+			$queryUpdateUser = $stm->prepare("UPDATE usuario SET nome = :nome, sobrenome=:sobrenome, idade=:idade WHERE email = :email AND senha = :senha");
+
+			$queryUpdateUser->bindValue(":nome", $usuario->__get("nome"));
+			$queryUpdateUser->bindValue(":sobrenome", $usuario->__get("sobrenome"));
+			$queryUpdateUser->bindValue(":idade", $usuario->__get("idade"));
+			$queryUpdateUser->bindValue(":email", $usuario->__get("email"));
+			$queryUpdateUser->bindValue(":senha", $usuario->__get("senha"));
+
+			$queryUpdateUser->execute();
+
+			$linhasAfetadas = $queryUpdateUser->rowCount();
+
+			if($linhasAfetadas>0){
+
+				echo "Dado Alterado com sucesso!";
+			}
+			else{
+
+				echo "Não foi possível alterar o dado!";
+
+			}
+
+			$this->conexaoBD->desconectar();
+		}
+
 		function alterarNome($email, $novoNome){
 
 			$this->conexaoBD->conectar();
@@ -221,5 +252,15 @@
 		
 
 	}
+
+	
+
+	/*
+		$user = new UsuarioBD();
+		$user->alterarDados(new Usuario("Noel", "Said", 52, "M", "leondias1989@gmail.com", "abcd1234"));
+
+	**/
+
+	
 	
  ?>

@@ -1,0 +1,131 @@
+* {
+	margin: 0px;
+}
+
+body {
+	font-family: Arial, Verdana, sans-serif;
+	color: #000;
+}
+
+header {
+	width: 100%;
+	height: 80px;
+	background-color: #000;
+}
+	
+	/*Criando uma classe área para configurar a div no documento HTML*/
+	header .area {
+		
+		width: 940px;
+		height: 100%;
+		margin: auto;
+	}
+
+		header .area h1 {
+			color: #fff;
+			font-size: 16px;
+			padding-top: 32px;
+			float: left;
+		}
+
+		/*Deixando o Navigator para a esquerda*/
+		header nav {
+			float: right;
+		}
+
+			/*Configurando a lista*/
+			header nav ul li {
+				display: inline-block;
+				width: 118px;
+				text-align: center;
+				padding-top: 4px;
+			}
+				
+				/*Configurando os links da lista*/
+				header nav ul li a {
+					color: #999;
+					text-decoration: none;
+					font-size: 12px;
+					font-weight: bold; 
+					border-top: 4px solid #999;
+					display: block;
+					width: 100%;
+					height: 100%;
+					padding-top: 30px;
+				}
+
+				
+				/*Quando estiver com o mouse por cima do texto*/
+				header nav ul li a:hover {
+					color: #fff;
+					border-top: 4px dashed #fff;
+				}
+
+
+				main {
+					width: 80%;
+					height: 80%;
+					margin: auto;
+					
+				}
+
+				section#cadastrar{
+
+						height: 400px;
+						width: 100%;
+						text-align: center;
+				}
+
+				main .form label {
+						
+						
+					font-size: 15px;
+					
+
+				}
+
+				
+
+
+				/**
+
+				section#cadastrar{
+
+						height: 400px;
+						width: 80%;
+					}
+
+					section#cadastrar article {
+
+						width: 100%;
+						height: 100%;
+						
+						
+						
+					}
+
+					main .form fieldset{
+
+						
+						float: left;
+
+					} 
+
+					main .form label {
+						
+						
+						font-size: 16px;
+
+
+					}
+
+				
+
+					main .form input[type="text"] {
+					  
+					  
+					}
+*/
+
+
+				

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 
 	<style type="text/css">
-		@import "../estilos/inicial.css";
+		@import "../estilos/cadastraJogo.css";
 	</style>
 </head>
 <body>
@@ -18,8 +18,9 @@
 				
 				<ul>
 
-					<li><a href="#">Adicionar Jogo</a></li>
-					<li><a href="#">Alterar Meus Dados</a></li>
+					<li><a href="../html/page_addJogo.php"/>Adicionar Jogo</a></li>
+					<li><a href="../html/page_visualizarJogo.php"/>Jogos</a></li>
+					<li><a href="../html/page_alterarDados.php">Alterar Meus Dados</a></li>
 					<li><a href="#">Encerrar Sessão</a></li>
 				</ul>
 

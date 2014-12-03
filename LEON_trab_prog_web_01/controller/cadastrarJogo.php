@@ -2,7 +2,7 @@
 
 
 	include '../dao/JogoBD.class.php';
-	include '../html/pageCadastroJogo.php';
+	include "../html/page_addJogo.php";
 	
 
 	$nome = $_POST["nome"];

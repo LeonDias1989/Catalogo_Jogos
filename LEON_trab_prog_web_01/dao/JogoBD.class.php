@@ -2,6 +2,7 @@
 
 	include 'ConectarBD.class.php';
 	include '../entidades/Jogo.class.php';
+	
 
 	class JogoBD
 	{
@@ -41,13 +42,15 @@
 
 				$queryInsertJogo->execute();
 
-				echo "Jogo Inserido com sucesso ";
+				echo "<script>altert('Jogo Inserido com sucesso!')</script>";
+				
 
 			}
 
 			else{
 
-				echo "Este jogo já existe!";
+				echo "<script>altert('ERRO     Este jogo já existe!')</script>";
+				
 			}	
 			
 
