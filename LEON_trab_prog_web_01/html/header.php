@@ -19,7 +19,7 @@
 				<ul>
 
 					<li><a href="#">Cadastrar</a></li>
-					<li><a href="#">Iniciar Sessão</a></li>
+					<li><a href="../html/page_login_usuario.php">Iniciar Sessão</a></li>
 				</ul>
 
 		
