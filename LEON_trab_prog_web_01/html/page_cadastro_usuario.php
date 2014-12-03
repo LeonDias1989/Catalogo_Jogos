@@ -1,24 +1,13 @@
-﻿<?php 
-
+<?php 
+	
 	include "../html/header.php";
+
 
  ?>
 
-	<main>
+ 	<main>
 
-		<section id="titulo">
-
-			<h1>Faça <i>log-on</i> ou cadastre-se</h1>	
-
-		</section>
-
-		
-
-		<section id="log">
-
-			<div class="log">
-
-				<article>
+ 		<article>
 
 					<form action="../controller/cadastrarUsuario.php" method="post">	
 
@@ -58,88 +47,14 @@
 
 				</article>
 
-			</div>
-		
-		</section>
-		<!--
-			Aqui encerra a sessão de logs
-		-->
+				<article>
 
-		<section id="imagens">
+ 	</main>
 
-			<article>
 
-				<figure>
 
-					<img src="../imgs/gears.jpg">
+ <?php 
 
-				</figure>
+ 	include "../html/footer.php";
 
-			</article>
-
-			<article>
-
-				<figure>
-
-					<img src="../imgs/gta5.jpg">
-
-				</figure>
-
-			</article>
-
-			
-			<article>
-				<figure>
-
-					<img src="../imgs/max.jpg">
-
-				</figure>
-			</article>
-
-			<article>
-				<figure>
-
-					<img src="../imgs/mg4.jpg">
-
-				</figure>
-			</article>
-
-			<article>
-				<figure>
-
-					<img src="../imgs/crash.jpg">
-
-				</figure>
-			</article>
-
-			<article>
-				<figure>
-
-					<img src="../imgs/ff9.jpg">
-
-				</figure>
-			</article>
-
-			<article>
-				<figure>
-
-					<img src="../imgs/gt6.jpg">
-
-				</figure>
-			</article>
-
-			<article>
-				<figure>
-
-					<img src="../imgs/mario.png">
-
-				</figure>
-			</article>
-
-	</section>
-
-	</main>	
-
-	</body>
-
-</html>
+  ?>
