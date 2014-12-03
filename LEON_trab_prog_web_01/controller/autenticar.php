@@ -25,7 +25,7 @@
 		else{
 
 			echo "<h1>Usuário ou Senha Inválidos !";
-			header("refresh:5; url=../html/page_header.php");
+			header("refresh:5; url=../html/index.php");
 		}
 
 	}
