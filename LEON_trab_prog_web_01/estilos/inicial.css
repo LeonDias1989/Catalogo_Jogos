@@ -3,14 +3,16 @@
 }
 
 body {
+
 	font-family: Arial, Verdana, sans-serif;
 	color: #000;
+	height: 1150px
 }
 
 header {
 	width: 100%;
 	height: 80px;
-	background-color: #000;
+	background-image: url("../imgs/crysis.jpg");
 }
 	
 	/*Criando uma classe área para configurar a div no documento HTML*/
@@ -43,11 +45,11 @@ header {
 				
 				/*Configurando os links da lista*/
 				header nav ul li a {
-					color: #999;
+					color: #fff;
 					text-decoration: none;
 					font-size: 12px;
 					font-weight: bold; 
-					border-top: 4px solid #999;
+					border-top: 4px solid #fff;
 					display: block;
 					width: 100%;
 					height: 100%;
@@ -85,6 +87,7 @@ header {
 						width: 40%;
 						height: 380px;
 						padding-left: 320px;
+						padding-top: 70px;
 					}
 
 					
@@ -121,6 +124,7 @@ header {
 
 						width: 100%;
 						height: 350px;
+						padding-top: 50px;
 					}
 
 
@@ -136,7 +140,8 @@ header {
 
 						width: 100%;
 						height: 200px;
-						background-color: #000;
+						background-image: url("../imgs/mario.jpg")
+						
 					}
 
 					
