@@ -19,6 +19,7 @@
 
 		if ($linhasAfetadas > 0 ) {
 			
+			//TODO: atribuir id à sessão bem como atributos
 			session_start();
 			header("location: ../html/inicial.php");
 		}

@@ -2,8 +2,7 @@
 	/**
 	*  Classe POJO para a entidade jogo
 	*/
-	class Jogo
-	{
+	class Jogo{
 
 		
 		private $nome;
@@ -33,11 +32,7 @@
 			$this->$atributo = $propriedade;
 		}
 
-		function __toString(){
-
-			return "Nome: " .$this->nome ."<br/>Gênero: " .$this->genero ."<br/>Idioma: " .$this->idioma
-			."<br/>distribuidora: " .$this->distribuidora;
-		}
+		
 	}
 
  ?>

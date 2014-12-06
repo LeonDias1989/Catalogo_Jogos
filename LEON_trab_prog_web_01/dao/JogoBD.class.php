@@ -43,8 +43,6 @@
 				$queryInsertJogo->execute();
 
 				echo "<script>altert('Jogo Inserido com sucesso!')</script>";
-				
-
 			}
 
 			else{
@@ -94,57 +92,32 @@
 
 		}
 
-		function alterarIdioma($nomeJogo, $idiomaDepois){
+		function alterarDados($jogo){
 
 			$this->conexao->conectar();
 			$stm = $this->conexao->getPDO();
 
-			$queryUpdateGame = $stm->prepare("UPDATE jogo SET idioma = :idiomaDepois WHERE nome = :nomeJogo");
+			$queryUpdateGame = $stm->prepare("UPDATE jogo SET genero = :genero,  idioma = :idioma, faixa_etaria = :faixa_etaria
+			WHERE nome = :nome");
 
-			$queryUpdateGame->bindValue(":nomeJogo", $nomeJogo);
-			$queryUpdateGame->bindValue(":idiomaDepois", $idiomaDepois);
-
-			$queryUpdateGame->execute();
-
-			$linhasAfetadas = $queryUpdateGame->rowCount();
-
-			if ($linhasAfetadas > 0) {
-
-				echo "Dados Alterados com Sucesso !";
-			}
-			else{
-
-				echo "Não foi possível alterar o dado!";
-			}
-			$this->conexao->desconectar();	
-
-		}
-
-		function alterarGenero($nomeJogo, $generoDepois){
-
-			$this->conexao->conectar();
-			$stm = $this->conexao->getPDO();
-
-			$queryUpdateGame = $stm->prepare("UPDATE jogo SET genero = :generoDepois WHERE nome = :nomeJogo");
-
-			$queryUpdateGame->bindValue(":nomeJogo", $nomeJogo);
-			$queryUpdateGame->bindValue(":generoDepois", $generoDepois);
+			$queryUpdateGame->bindValue(":genero", $jogo->__get("genero"));
+			$queryUpdateGame->bindValue(":idioma", $jogo->__get("idioma"));
+			$queryUpdateGame->bindValue(":faixa_etaria", $jogo->__get("faixa_etaria"));
+			$queryUpdateGame->bindValue(":nome", $jogo->__get("nome"));
 
 			$queryUpdateGame->execute();
 
-			$linhasAfetadas = $queryUpdateGame->rowCount();
+			
+			if($queryUpdateGame->rowCount() > 0 ){ echo "Jogo Atualizado com sucesso!";}
+			else
+				echo "Não foi possível atualizar os dados do jogo!";
 
-			if ($linhasAfetadas > 0) {
+			$this->conexao->desconectar();
 
-				echo "Dados Alterados com Sucesso !";
-			}
-			else{
-
-				echo "Não foi possível alterar o dado!";
-			}
-			$this->conexao->desconectar();	
 
 		}
+
+			
 
 		function deletarJogo($jogo){
 
@@ -169,5 +142,6 @@
 
 		}
 	}
+
 
  ?>

@@ -40,11 +40,7 @@
 			$this->$atributo = $propriedade;
 		}
 
-		function __toString(){
-
-			return "Nome: " .$this->nome ."<br/>Sobrenome: " .$this->sobrenome ."<br/>Email: " .$this->email;
-		}
-
+		
 	}
 
  ?>

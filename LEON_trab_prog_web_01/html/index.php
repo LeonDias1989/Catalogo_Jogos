@@ -16,9 +16,11 @@
 
 		<section id="log">
 
-			<div class="log">
+			
 
-				<article>
+			
+
+					<div class="log">
 
 					<form action="../controller/cadastrarUsuario.php" method="post">	
 
@@ -56,9 +58,10 @@
 
 					</form>
 
-				</article>
+					</div>
 
-			</div>
+
+			
 		
 		</section>
 		<!--
