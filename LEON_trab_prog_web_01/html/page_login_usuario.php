@@ -7,15 +7,16 @@
 
  	<main>
 
- 		<article>
 
-					<form action="../controller/autenticar.php" method="post">
+ 		<div class="logon">
 
-						<fieldset>
+ 			<form action="../controller/autenticar.php" method="post">
 
-						<legend>Entrar</legend>
-			
-						
+				<fieldset>
+
+					<legend>Entrar</legend>
+				
+							
 						<label>Insira seu e-mail e senha</label>
 
 						<br/><br/>
@@ -28,15 +29,15 @@
 
 						<br/><br/>
 						<input name="acao" type="submit" value="Entrar" />
-					
-						</fieldset>
-					</form>
+						
+				</fieldset>
+	
+			</form>
 
-				</article>
+		</div>
+ 		
 
-				<article>
-
- 	</main>
+	</main>
 
 
 

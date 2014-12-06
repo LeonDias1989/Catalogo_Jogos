@@ -82,7 +82,7 @@ header {
 						
 					}
 
-					section .log{
+					main .log{
 
 						width: 40%;
 						height: 380px;
@@ -90,7 +90,6 @@ header {
 						padding-top: 70px;
 					}
 
-					
 					main .log label {
 						
 						color: #000;
@@ -117,6 +116,41 @@ header {
 					  float: right;
 					  
 					}
+
+					main .logon{
+
+						width: 40%;
+						height: 380px;
+						padding-left: 320px;
+						padding-top: 100px;
+
+					}
+
+					main .logon label {
+						
+						color: #000;
+						font-size: 15px;
+						float: left;
+						
+					}
+
+					main .logon input[type="email"] {
+					  
+					 float: right;
+					
+					  
+					}
+
+					main .logon input[type="password"] {
+					  
+					  float: right;
+					  
+					}
+
+					
+
+					
+					
 
 					/*Encerra o bloco do formulário**/
 

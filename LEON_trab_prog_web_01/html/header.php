@@ -17,8 +17,6 @@
 			<nav>
 				
 				<ul>
-
-					<li><a href="../html/page_cadastro_usuario.php">Cadastrar</a></li>
 					<li><a href="../html/page_login_usuario.php">Iniciar Sessão</a></li>
 				</ul>
 
