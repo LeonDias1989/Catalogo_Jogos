@@ -42,12 +42,14 @@
 
 				$queryInsertJogo->execute();
 
-				echo "<script>altert('Jogo Inserido com sucesso!')</script>";
+				echo "<script>alert('Jogo Inserido com sucesso!');</script>";
+				header("refresh:1; url=../html/page_addJogo.php");
 			}
 
 			else{
 
-				echo "<script>altert('ERRO     Este jogo já existe!')</script>";
+				echo "<script>alert('ERRO     Este jogo já existe!');</script>";
+				header("refresh:1; url=../html/page_addJogo.php");
 				
 			}	
 			

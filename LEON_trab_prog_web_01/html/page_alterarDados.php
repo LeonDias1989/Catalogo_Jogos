@@ -1,6 +1,7 @@
 <?php 
 
 	include "../html/header2.php";
+	require "../controller/validacao.php";
 
  ?>
 

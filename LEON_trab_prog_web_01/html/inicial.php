@@ -1,6 +1,7 @@
 <?php 
 	
 	include "../html/header2.php";
+	require "../controller/validacao.php";
 
  ?>
 
@@ -8,6 +9,13 @@
 
 	<main>
 
+
+		<?php 
+
+			//echo "Nome da sessão: " .$_SESSION["id"];
+			
+
+		 ?>
 
 	</main>
 

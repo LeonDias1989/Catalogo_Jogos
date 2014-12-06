@@ -19,14 +19,18 @@
 
 		if ($linhasAfetadas > 0 ) {
 			
-			//TODO: atribuir id à sessão bem como atributos
+			//iniciando a sessão
 			session_start();
+
+			//Atribuindo um id à mesma
+			$_SESSION["id"] = $usuarioBD->getID($usuario);
+			
 			header("location: ../html/inicial.php");
 		}
 		else{
 
-			echo "<h1>Usuário ou Senha Inválidos !";
-			header("refresh:5; url=../html/index.php");
+			echo "<script>alert('ERRO Usuário ou Senha Inválidos !');</script>";
+			header("refresh:1; url=../html/index.php");
 		}
 
 	}

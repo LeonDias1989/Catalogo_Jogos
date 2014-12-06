@@ -48,7 +48,8 @@
 				
 				$queryInsertUser->execute();
 
-				echo "<script>alert('Usuário inserido com sucesso!');</script>";
+				echo "<script>alert('Usuário inserido com sucesso!  Agora inicie a sessão!');</script>";
+				header("refresh:1; url=../html/index.php");
 				
 			
 			}
@@ -78,6 +79,27 @@
 
 		return $querySelectUser->rowCount();
 		
+		}
+
+		function getID($usuario){
+
+			$this->conexaoBD->conectar();
+			$stm = $this->conexaoBD->getPDO();
+
+			$querySelectId = $stm->prepare("SELECT id FROM usuario WHERE email = :email");
+			$querySelectId->bindValue(":email", $usuario->__get("email"));
+
+
+			$querySelectId->execute();
+			$id;
+
+			while ($linha = $querySelectId->fetch(PDO:: FETCH_ASSOC)) {
+
+				$id = $linha["id"];		
+			}
+
+			$this->conexaoBD->desconectar();
+			return $id;
 		}
 
 		function visualizar($usuario = ""){
@@ -138,11 +160,14 @@
 
 			if($linhasAfetadas>0){
 
-				echo "Dado Alterado com sucesso!";
+				//header("location: ../html/page_alterarDados.php");
+				echo "<script>alert('Dados alterados com sucesso!');</script>";
+				header("refresh:1; url=../html/page_alterarDados.php");
 			}
 			else{
 
-				echo "Não foi possível alterar o dado!";
+				echo "<script>alert('Não foi possível alterar os dados!');</script>";
+				header("refresh:1; url=../html/page_alterarDados.php");
 
 			}
 
@@ -174,11 +199,15 @@
 	
 
 	/*
-		$user = new UsuarioBD();
-		$user->alterarDados(new Usuario("Noel", "Said", 52, "M", "leondias1989@gmail.com", "abcd1234"));
+	
+	$user = new UsuarioBD();
+	$user->alterarDados(new Usuario("Noel", "Said", 52, "M", "leondias1989@gmail.com", "abcd1234"));
+
+	---------------------
+	$usuario = new UsuarioBD();
+
+	echo $usuario->getID(new Usuario(null, null, null, null, "trevor.vida_louca@yahoo.com.br", null));
 
 	**/
-
-	
 	
  ?>

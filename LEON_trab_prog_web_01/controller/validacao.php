@@ -8,5 +8,5 @@
 	// verifica se a sessão foi criada corretamente anteriormente
 	// caso contrário redireciona para a página de login
 	if(!isset($_SESSION["id"]))
-		header("Location: login.php");
+		header("Location: index.php");
 ?>
