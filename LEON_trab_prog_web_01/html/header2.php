@@ -20,6 +20,8 @@
 
 					<li><a href="../html/page_addJogo.php"/>Adicionar Jogo</a></li>
 					<li><a href="../html/page_visualizarJogo.php"/>Jogos</a></li>
+					<li><a href="#"/>Meus Jogos</a></li>
+					<li><a href="#"/>Pesquisar</a></li>
 					<li><a href="../html/page_alterarDados.php">Alterar Meus Dados</a></li>
 					<li><a href="../html/page_logout.php">Encerrar Sessão</a></li>
 				</ul>

@@ -12,6 +12,7 @@
  			$JogoBD = new JogoBD();
 
  			$JogoBD->visualizar();
+ 			
 
  		 ?>
 

@@ -62,16 +62,84 @@
 			$stm = $this->conexao->getPDO();
 
 			if ($jogo == "") {
-				$querySelectJogo = $stm->prepare("SELECT * FROM jogo");
+				$querySelectJogo = $stm->prepare("SELECT * FROM jogo GROUP BY nome");
 
 				$querySelectJogo->execute();
 
+				$tabela = "
+						<div class = 'table_config'>
+						<table border='1' width='80%'>
+						<thead>
+							<tr>
+								<td>Nome</td>
+								<td>Distribuidora</td>
+								<td>Gênero</td>
+								<td>Tenho</td>
+
+
+							</tr>
+						</thead>
+
+						<tfoot>
+							<tr>
+								<td colspan='4' rowspan = '2'>Total de Jogos: " .$querySelectJogo->rowCount()."</td>	
+									
+							</tr>	
+						</tfoot>";
+
 				while ($linha = $querySelectJogo->fetch(PDO::FETCH_ASSOC)) {
+
+
+					$tabela.= "
+							<tbody>
+								<tr>
+									<td>"  .$linha["nome"] ."</td>
+									<td>"  .$linha["distribuidora"] ."</td>
+									<td>"  .$linha["genero"] ."</td>
+									<td><input type='checkbox' value='" .$linha["id"] ."'></td>
+								</tr>
+								
+							</tbody>";
+
+
+
+					/*
+
+					<table border="1">
+						<thead>
+							<tr>
+								<td>Cabeçalho 1</td>
+								<td>Cabeçalho 2</td>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<td>Rodapé 1</td>	
+								<td>Rodapé 2</td>	
+							</tr>	
+						</tfoot>
+						<tbody>
+							<tr>
+								<td>Linha 1 - Coluna 1</td>
+								<td>Linha 1 - Coluna 2</td>
+							</tr>
+							<tr>
+								<td>Linha 2 - Coluna 1</td>
+								<td>Linha 2 - Coluna 2</td>
+							</tr>
+						</tbody>
+					</table>
+
+				**/
 
 					//TODO: fazer uma tabela em HTML aqui
 
-					echo $linha["nome"] .", " .$linha["distribuidora"] .", " .$linha["genero"] ."<br/>";
+					//echo $linha["nome"] .", " .$linha["distribuidora"] .", " .$linha["genero"] ."<br/>";
 				}
+
+				$tabela.= "</table> </div>";
+
+				echo $tabela;
 
 			}
 			else{

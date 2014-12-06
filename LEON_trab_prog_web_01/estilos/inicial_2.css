@@ -120,6 +120,23 @@ header {
 						float: right;
 
 					}
+
+					main .table_config{
+
+						padding-left: 130px;
+
+					}
+
+					main .table_config table{
+
+						text-align: center;
+					}
+					
+					main .table_config table tbody{
+
+						text-align: left;
+					}
+
 					
 
 					footer{
