@@ -18,8 +18,4 @@
  	</main>
 
 
- <?php 
-
-	include "../html/footer.php";
-
-  ?>
+ 

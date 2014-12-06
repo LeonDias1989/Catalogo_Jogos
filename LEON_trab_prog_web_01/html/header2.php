@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 
 	<style type="text/css">
-		@import "../estilos/cadastraJogo.css";
+		@import "../estilos/inicial_2.css";
 	</style>
 </head>
 <body>
