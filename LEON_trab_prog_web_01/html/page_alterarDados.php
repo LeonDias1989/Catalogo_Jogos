@@ -16,18 +16,46 @@
 
 						<fieldset>
 
+							<?php 
+
+								include "../dao/UsuarioBD.class.php";
+								
+
+								$usuarioDAO = new UsuarioBD();
+								$usuario = $usuarioDAO->getUser($_SESSION["id"]);
+
+							 ?>
+
 							<legend>Alterar Dados do Usuário</legend>
 
 							<label>Nome: </label>
-							<input type="text" id="nome" name="nome">
+							<input type="text" id="nome" name="nome" placeholder= "<?php 
+
+								
+
+								echo $usuario->__get("nome");
+
+
+							 ?>">
 							<br><br>
 
 							<label>Sobrenome: </label>
-							<input type="text" id="sobrenome" name="sobrenome">
+							<input type="text" id="sobrenome" name="sobrenome" placeholder = "<?php 
+
+								
+								echo $usuario->__get("sobrenome");
+
+							 ?>">
 							<br><br>
 
 							<label>Idade: </label>
-							<input type="text" id="idade" name="idade">
+							<input type="text" id="idade" name="idade" placeholder = "<?php 
+
+
+
+								echo $usuario->__get("idade");
+
+							 ?>">
 							<br><br/>
 
 							<label>Confirme seu e-mail e senha:</label>

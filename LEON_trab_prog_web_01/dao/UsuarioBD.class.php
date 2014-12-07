@@ -102,6 +102,31 @@
 			return $id;
 		}
 
+		function getUser($id){
+
+			$this->conexaoBD->conectar();
+			$stm = $this->conexaoBD->getPDO();
+
+			$querySelectId = $stm->prepare("SELECT * FROM usuario WHERE id = :id");
+			$querySelectId->bindValue(":id", $id);
+
+
+			$usuarioRetorno = new Usuario(null, null, null, null , null , null);
+
+			$querySelectId->execute();
+			$id;
+
+			while ($linha = $querySelectId->fetch(PDO:: FETCH_ASSOC)) {
+
+				$usuarioRetorno->__set("nome", $linha["nome"]);
+				$usuarioRetorno->__set("sobrenome", $linha["sobrenome"]);
+				$usuarioRetorno->__set("idade", $linha["idade"]);
+			}
+
+			$this->conexaoBD->desconectar();
+			return $usuarioRetorno;
+		}
+
 		function visualizar($usuario = ""){
 
 
