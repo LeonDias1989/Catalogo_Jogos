@@ -36,17 +36,30 @@
 							<input type="text" id="idade" name="idade">
 							<br/><br/>
 
-							<label for ="sexo" >Sexo: </label>	
-							<input type="text" id="sexo" name="sexo">	
+							<label for="options">Sexo</label>
+
+							<select name="options">
+
+								<option id="sexo" name="sexo" value="M">Masculino</option>
+								<option id="sexo" name="sexo" value="F">Feminino</option>
+								
+
+							</select>
+	
 							<br/><br/>
 
 							<label for ="email" >E-mail: </label>	
 							<input type="email" id="email" name="email">
 							<br/><br/>
+							
 							<label for ="senha" >Senha: </label>	
-							<input type="password" id="senha" name="senha">					
-
+							<input type="password" id="senha" name="senha">	
 							<br/><br/>
+
+							<label for="senhaConf">Confirme sua senha:</label>
+							<input name="senhaConf" id="senhaConf" type="password" required/>				
+							<br/><br/>
+							
 
 							<input type="submit" id="enviar" nome="enviar" value="Cadastrar">
 

@@ -28,12 +28,13 @@
 						<input name="senha" id="senha" type="password" required/>
 
 						<br/><br/>
+						
 						<input name="acao" type="submit" value="Entrar" />
 						
 				</fieldset>
 	
 			</form>
-
+			<a href="index.php">Voltar</a>
 		</div>
  		
 
