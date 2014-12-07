@@ -99,7 +99,7 @@
 									<td>"  .$linha["nome"] ."</td>
 									<td>"  .$linha["distribuidora"] ."</td>
 									<td>"  .$linha["genero"] ."</td>
-									<td><input type='checkbox' value='" .$linha["id"] ."' name='jogos[]'</td>
+									<td><input type='checkbox' value='" .$linha["id"] ."' name='jogos[]'></td>
 								</tr>
 								
 							</tbody>";
