@@ -51,7 +51,7 @@
 						
 
 					</form>
-					<a href="page_removeUsuario.php">Remover</a>
+					<a href="page_removeUsuario.php">Cancelar minha conta</a>
 				</div>
 
 
