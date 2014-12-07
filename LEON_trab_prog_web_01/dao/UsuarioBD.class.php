@@ -175,18 +175,34 @@
 		}
 
 		
-		function deletarUsuario($usuario){
+		function deletarUsuario($usuario, $id){
 
 			$this->conexaoBD->conectar();
 			$stm = $this->conexaoBD->getPDO();
 
-			$queryDeleteUser = $stm->prepare("DELETE FROM usuario WHERE email = :email");
-			$queryDeleteUser->bindValue("email", $usuario->__get("email"));
+			$queryDeleteUser = $stm->prepare("DELETE FROM usuario WHERE email = :email and senha = :senha
+				and id = :id");
+			$queryDeleteUser->bindValue(":email", $usuario->__get("email"));
+			$queryDeleteUser->bindValue(":senha", $usuario->__get("senha"));
+			$queryDeleteUser->bindValue(":id", $id);
 			$queryDeleteUser->execute();
 
-			if($queryDeleteUser->rowCount() > 0){ echo "O usuário foi excluido com êxito";}
-				else
-					echo "Não foi possível excluir o usuário!";
+			if($queryDeleteUser->rowCount() > 0){
+
+			echo "<script>alert('O usuário foi excluido com êxito!');</script>";
+			header("refresh:1; url=../html/page_logout.php");	
+
+			 
+
+			}
+				else{
+
+					echo "<script>alert('Não foi possível excluir o usuário!');</script>";
+					header("refresh:1; url=../html/page_alterarDados.php");	
+
+
+				}
+					
 
 			$this->conexaoBD->desconectar();
 

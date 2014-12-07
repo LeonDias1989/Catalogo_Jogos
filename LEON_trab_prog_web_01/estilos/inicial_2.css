@@ -90,11 +90,31 @@ header {
 					  
 					}
 
+					main .form_console{
+
+					width: 60%;
+					height: 380px;
+					padding-left: 220px;
+					padding-top: 70px;
+				}
+
+					main .form_console label{
+
+						float: left;
+					}
+
+					
+					main .form_console input[type="text"] {
+					  
+					  float: right;
+					  
+					}
+
 					main .form_dados{
 
 						width: 50%;
 						height: 380px;
-						padding-left: 220px;
+						padding-left: 270px;
 						padding-top: 70px;
 					}
 

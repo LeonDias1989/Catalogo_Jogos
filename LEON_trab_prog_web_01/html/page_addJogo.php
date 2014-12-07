@@ -7,7 +7,7 @@
 
  	<main>
 		
-		<section id="cadastrar">
+		
 
 			<div class="form">
 
@@ -46,9 +46,11 @@
 
 
 					</form>
+					<a href="page_addConsole.php">Clique aqui para adicionar um novo Console</a>
 
 			</div>
 
+				
  		
  	</main>
 

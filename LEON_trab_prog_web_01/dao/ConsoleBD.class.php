@@ -35,9 +35,14 @@
 				$queryInsertPlat->execute();
 
 				echo "<script>alert('Console cadastrado com sucesso!')</script>";
+				header("refresh:1; url=../html/page_addJogo.php");
 			}
-			else
+			else{
+
 				echo "<script>alert('ERRO     Não foi possível cadastrar o console!')</script>";
+				header("refresh:1; url=../html/page_addJogo.php");
+			}
+				
 
 			$this->conexao->desconectar();
 

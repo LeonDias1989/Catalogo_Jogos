@@ -18,7 +18,7 @@
 				
 				<ul>
 
-					<li><a href="../html/page_addJogo.php"/>Adicionar Jogo</a></li>
+					<li><a href="../html/page_addJogo.php"/>ADD Jogo/Console</a></li>
 					<li><a href="../html/page_visualizarJogo.php"/>Jogos</a></li>
 					<li><a href="#"/>Meus Jogos</a></li>
 					<li><a href="#"/>Pesquisar</a></li>

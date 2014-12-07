@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS `jogo_usuario` (
   `id_usuarioFK` int NOT NULL,
   `id_jogoFK` int NOT NULL,
   PRIMARY KEY (`id`), 
-  FOREIGN KEY (id_usuarioFK) REFERENCES usuario(id),
-  FOREIGN KEY (id_jogoFK) REFERENCES jogo(id)
+  FOREIGN KEY (id_usuarioFK) REFERENCES usuario(id)  ON DELETE CASCADE,
+  FOREIGN KEY (id_jogoFK) REFERENCES jogo(id)  ON DELETE CASCADE
     
 ) 
