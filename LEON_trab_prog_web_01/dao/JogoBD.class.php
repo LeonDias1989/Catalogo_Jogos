@@ -70,6 +70,8 @@
 
 				$tabela = "
 						<div class = 'table_config'>
+						<form action='../Testes/teste04.php' method='post'>
+						<input type='submit' value='enviar'>	
 						<table border='1' width='80%'>
 						<thead>
 							<tr>
@@ -84,8 +86,7 @@
 
 						<tfoot>
 							<tr>
-								<td colspan='4' rowspan = '2'>Total de Jogos: " .$querySelectJogo->rowCount()."</td>	
-									
+								<td colspan='4' rowspan = '2'>Total de Jogos: " .$querySelectJogo->rowCount()."</td>
 							</tr>	
 						</tfoot>";
 
@@ -98,7 +99,7 @@
 									<td>"  .$linha["nome"] ."</td>
 									<td>"  .$linha["distribuidora"] ."</td>
 									<td>"  .$linha["genero"] ."</td>
-									<td><input type='checkbox' value='" .$linha["id"] ."'></td>
+									<td><input type='checkbox' value='" .$linha["id"] ."' name='jogos[]'</td>
 								</tr>
 								
 							</tbody>";
@@ -139,7 +140,9 @@
 					//echo $linha["nome"] .", " .$linha["distribuidora"] .", " .$linha["genero"] ."<br/>";
 				}
 
-				$tabela.= "</table> </div>";
+				$tabela.= "</table>
+							</form>
+							 </div>";
 
 				echo $tabela;
 
