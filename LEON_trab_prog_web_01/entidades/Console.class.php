@@ -1,23 +1,20 @@
 ﻿<?php 
 
-
-
-	/**
-	*  Classe POJO para a entidade plataforma
-	*/
-	class Plataforma{
+	class Console{
 		
 		
 		private $nome;
-		private $data_lancamento;
+		private $midia;
 		private $geracao;
+		private $fabricante;
 
-		function __construct($nome="", $data_lancamento="", $geracao="")
+		function __construct($nome="", $midia="", $geracao="", $fabricante="")
 		{
 			
 			$this->nome = $nome;
-			$this->data_lancamento = $data_lancamento;
+			$this->midia = $midia;
 			$this->geracao = $geracao;
+			$this->fabricante = $fabricante;
 		}
 
 		function __get($atributo){
