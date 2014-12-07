@@ -179,17 +179,11 @@
 
 			$queryInsertJogoUsuario->execute();
 
-			if ($queryInsertJogoUsuario->rowCount() > 0) {
-							
-				echo "<script>alert('Jogo(s) Inserido(s) com sucesso!');</script>";
-				header("refresh:1; url=../html/page_visualizarJogo.php");
-				
-			}
-			else{
-				echo "<script>alert('ERRO     Não foi possível inserir!');</script>";
-				header("refresh:1; url=../html/inicial.php");
-			}			
+			$total = $queryInsertJogoUsuario->rowCount();
+			
 			$this->conexao->desconectar();
+
+			return $total;
 
 		}
 
