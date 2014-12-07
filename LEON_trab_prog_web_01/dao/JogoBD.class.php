@@ -71,7 +71,7 @@
 				$tabela = "
 						<div class = 'table_config'>
 						<form action='../controller/cadastrar_jogo_usuario.php' method='post'>
-						<input type='submit' value='enviar'>	
+						<input type='submit' value='Adicionar'>	
 						<table border='1' width='80%'>
 						<thead>
 							<tr>
@@ -141,7 +141,7 @@
 				}
 
 				$tabela.= "</table>
-							<input type='submit' value='enviar'>	
+							<input type='submit' value='Adicionar'>	
 							</form>
 							 </div>";
 
