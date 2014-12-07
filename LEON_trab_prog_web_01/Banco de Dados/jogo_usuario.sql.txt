@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS `jogo_usuario` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_usuarioFK` int NOT NULL,
+  `id_jogoFK` int NOT NULL,
+  PRIMARY KEY (`id`), 
+  FOREIGN KEY (id_usuarioFK) REFERENCES usuario(id),
+  FOREIGN KEY (id_jogoFK) REFERENCES jogo(id)
+    
+) 

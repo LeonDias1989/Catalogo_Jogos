@@ -70,7 +70,7 @@
 
 				$tabela = "
 						<div class = 'table_config'>
-						<form action='../Testes/teste04.php' method='post'>
+						<form action='../controller/cadastrar_jogo_usuario.php' method='post'>
 						<input type='submit' value='enviar'>	
 						<table border='1' width='80%'>
 						<thead>
@@ -141,6 +141,7 @@
 				}
 
 				$tabela.= "</table>
+							<input type='submit' value='enviar'>	
 							</form>
 							 </div>";
 
@@ -161,6 +162,33 @@
 
 			}
 
+			$this->conexao->desconectar();
+
+		}
+
+		function cadastrarJogoUsuario($idJogo, $idUsuario){
+
+			$this->conexao->conectar();
+			$stm = $this->conexao->getPDO();
+
+			$queryInsertJogoUsuario = $stm->prepare("INSERT INTO jogo_usuario (id_usuarioFK, id_jogoFK)
+				VALUES (:idUsuario, :idJogo)");
+
+			$queryInsertJogoUsuario->bindValue(":idUsuario", $idUsuario);
+			$queryInsertJogoUsuario->bindValue(":idJogo", $idJogo);
+
+			$queryInsertJogoUsuario->execute();
+
+			if ($queryInsertJogoUsuario->rowCount() > 0) {
+							
+				echo "<script>alert('Jogo(s) Inserido(s) com sucesso!');</script>";
+				header("refresh:1; url=../html/page_visualizarJogo.php");
+				
+			}
+			else{
+				echo "<script>alert('ERRO     Não foi possível inserir!');</script>";
+				header("refresh:1; url=../html/inicial.php");
+			}			
 			$this->conexao->desconectar();
 
 		}
