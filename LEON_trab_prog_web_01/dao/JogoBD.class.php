@@ -63,7 +63,7 @@
 			$this->conexao->conectar();
 			$stm = $this->conexao->getPDO();
 
-			$querySelect = $stm->prepare("SELECT * FROM jogo WHERE nome LIKE CONCAT('%', :nome, '%')");
+			$querySelect = $stm->prepare("SELECT * FROM jogo WHERE nome LIKE CONCAT('%', :nome, '%') ORDER BY(nome)");
 
 			$querySelect->bindValue(":nome", $jogo->__get("nome"));
 
@@ -74,6 +74,7 @@
 
 				$tabela = "
 						<div class = 'table_config'>
+						<a href='../html/page_pesquisaJogo.php'>Voltar</a>
 						<table border='1' width='80%'>
 						<thead>
 							<tr>
@@ -105,13 +106,14 @@
 				}
 
 				$tabela.= "</table>
+							<a href='../html/page_pesquisaJogo.php'>Voltar</a>
 							 </div>";
 
 				echo $tabela;
 
 			}
 			else
-				echo "Nenhum Registro Encontrado";
+				echo "Nenhum Registro Encontrado<br/><br/><a href='../html/page_pesquisaJogo.php'>Voltar</a>";
 
 			$this->conexao->desconectar();
 

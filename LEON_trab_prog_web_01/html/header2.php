@@ -21,7 +21,7 @@
 					<li><a href="../html/page_addJogo.php"/>ADD Jogo/Console</a></li>
 					<li><a href="../html/page_visualizarJogo.php"/>Jogos</a></li>
 					<li><a href="inicial.php"/>Meus Jogos</a></li>
-					<li><a href="#"/>Pesquisar</a></li>
+					<li><a href="page_pesquisaJogo.php"/>Pesquisar</a></li>
 					<li><a href="../html/page_alterarDados.php">Alterar Meus Dados</a></li>
 					<li><a href="../html/page_logout.php">Encerrar Sessão</a></li>
 				</ul>
