@@ -150,6 +150,7 @@
 						<div class = 'table_config'>
 						
 						<form action='../controller/remover_jogo_usuario.php' method='post'>
+						<label>Meus Jogos</label><br/><br/>
 						<input type='submit' value='Remover'>	
 						<table border='1' width='80%'>
 						<thead>
@@ -190,7 +191,7 @@
 				$tabela.= "</table>
 							<input type='submit' value='Remover'>	
 							<br/><br/>
-							<label>Caso queira remover, selecione o jogo na tabela<label>
+							<label>Caso queira remover, selecione o jogo na tabela</label>
 							</form>
 							 </div>";
 
