@@ -105,39 +105,6 @@
 							</tbody>";
 
 
-
-					/*
-
-					<table border="1">
-						<thead>
-							<tr>
-								<td>Cabeçalho 1</td>
-								<td>Cabeçalho 2</td>
-							</tr>
-						</thead>
-						<tfoot>
-							<tr>
-								<td>Rodapé 1</td>	
-								<td>Rodapé 2</td>	
-							</tr>	
-						</tfoot>
-						<tbody>
-							<tr>
-								<td>Linha 1 - Coluna 1</td>
-								<td>Linha 1 - Coluna 2</td>
-							</tr>
-							<tr>
-								<td>Linha 2 - Coluna 1</td>
-								<td>Linha 2 - Coluna 2</td>
-							</tr>
-						</tbody>
-					</table>
-
-				**/
-
-					//TODO: fazer uma tabela em HTML aqui
-
-					//echo $linha["nome"] .", " .$linha["distribuidora"] .", " .$linha["genero"] ."<br/>";
 				}
 
 				$tabela.= "</table>
@@ -166,6 +133,78 @@
 
 		}
 
+		function visualizarJogoUsuario($id){
+
+			$this->conexao->conectar();
+			$stm = $this->conexao->getPDO();
+
+			$querySelect = $stm->prepare("SELECT jogo.id as id, nome, distribuidora, genero, idioma FROM jogo INNER JOIN jogo_usuario 
+			WHERE jogo.id = jogo_usuario.id_jogoFK AND jogo_usuario.id_usuarioFK = :id  ORDER BY(jogo.nome)");
+
+			$querySelect->bindValue(":id", $id);
+			$querySelect->execute();
+
+			if ($querySelect->rowCount() > 0 ) {
+
+				$tabela = "
+						<div class = 'table_config'>
+						
+						<form action='../controller/remover_jogo_usuario.php' method='post'>
+						<input type='submit' value='Remover'>	
+						<table border='1' width='80%'>
+						<thead>
+							<tr>
+								<td>Nome</td>
+								<td>Distribuidora</td>
+								<td>Gênero</td>
+								<td>Idioma</td>
+								<td>Excluir</td>
+
+							</tr>
+						</thead>
+
+						<tfoot>
+							<tr>
+								<td colspan='5' rowspan = '2'>Total de Jogos: " .$querySelect->rowCount()."</td>
+							</tr>	
+						</tfoot>";
+
+				while ($linha = $querySelect->fetch(PDO::FETCH_ASSOC)) {
+
+
+					$tabela.= "
+							<tbody>
+								<tr>
+									<td>"  .$linha["nome"] ."</td>
+									<td>"  .$linha["distribuidora"] ."</td>
+									<td>"  .$linha["genero"] ."</td>
+									<td>"  .$linha["idioma"] ."</td>
+									<td><input type='checkbox' value='" .$linha["id"] ."' name='jogos_usuario[]'></td>
+								</tr>
+								
+							</tbody>";
+
+
+				}
+
+				$tabela.= "</table>
+							<input type='submit' value='Remover'>	
+							<br/><br/>
+							<label>Caso queira remover, selecione o jogo na tabela<label>
+							</form>
+							 </div>";
+
+				echo $tabela;
+				
+			}
+			else{
+
+				echo "Nenhum Resultado";
+			}
+
+			$this->conexao->desconectar();
+		}
+
 		function cadastrarJogoUsuario($idJogo, $idUsuario){
 
 			$this->conexao->conectar();
@@ -184,6 +223,29 @@
 			$this->conexao->desconectar();
 
 			return $total;
+
+		}
+
+		function removerJogoUsuario($idJogo, $idUsuario){
+
+
+			$this->conexao->conectar();
+			$stm = $this->conexao->getPDO();
+
+			$queryDeleteJogoUsuario = $stm->prepare("DELETE FROM jogo_usuario WHERE id_usuarioFK =:idUsuario AND id_jogoFK = :idJogo ");
+
+			$queryDeleteJogoUsuario->bindValue(":idJogo", $idJogo);
+			$queryDeleteJogoUsuario->bindValue(":idUsuario", $idUsuario);
+
+			$queryDeleteJogoUsuario->execute();
+
+			$total = $queryDeleteJogoUsuario->rowCount();
+			
+			$this->conexao->desconectar();
+
+			return $total;
+
+
 
 		}
 
@@ -237,6 +299,7 @@
 
 		}
 	}
+
 
 
  ?>
