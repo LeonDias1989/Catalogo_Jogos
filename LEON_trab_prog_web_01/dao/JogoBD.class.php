@@ -58,6 +58,65 @@
 			
 		}
 
+		function selecionarJogo($jogo){
+
+			$this->conexao->conectar();
+			$stm = $this->conexao->getPDO();
+
+			$querySelect = $stm->prepare("SELECT * FROM jogo WHERE nome LIKE CONCAT('%', :nome, '%')");
+
+			$querySelect->bindValue(":nome", $jogo->__get("nome"));
+
+
+			$querySelect->execute();
+
+			if($querySelect->rowCount() > 0 ){
+
+				$tabela = "
+						<div class = 'table_config'>
+						<table border='1' width='80%'>
+						<thead>
+							<tr>
+								<td>Nome</td>
+								<td>Distribuidora</td>
+								<td>Gênero</td>
+							</tr>
+						</thead>
+
+						<tfoot>
+							<tr>
+								<td colspan='4' rowspan = '2'>Total de Registros Encontrados: " .$querySelect->rowCount()."</td>
+							</tr>	
+						</tfoot>";
+
+				while ($linha = $querySelect->fetch(PDO::FETCH_ASSOC)) {
+
+
+					$tabela.= "
+							<tbody>
+								<tr>
+									<td>"  .$linha["nome"] ."</td>
+									<td>"  .$linha["distribuidora"] ."</td>
+									<td>"  .$linha["genero"] ."</td>
+								</tr>
+								
+							</tbody>";
+
+				}
+
+				$tabela.= "</table>
+							 </div>";
+
+				echo $tabela;
+
+			}
+			else
+				echo "Nenhum Registro Encontrado";
+
+			$this->conexao->desconectar();
+
+		}
+
 		function visualizar($jogo =""){
 
 			$this->conexao->conectar();
@@ -200,7 +259,7 @@
 			}
 			else{
 
-				echo "Nenhum Resultado";
+				echo "Meus Jogos: Nenhum Resultado";
 			}
 
 			$this->conexao->desconectar();
@@ -301,6 +360,12 @@
 		}
 	}
 
+	/*
 
+	$jogoDAO = new JogoBD();
+	//$nome="", $distribuidora="", $genero="", $idioma="", $faixa_etaria=""
+	$jogoDAO->selecionarJogo(new Jogo("hill", "games", "zueira", "Cantonês", 20));
+
+	**/
 
  ?>
