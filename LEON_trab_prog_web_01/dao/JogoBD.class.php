@@ -131,6 +131,7 @@
 
 				$tabela = "
 						<div class = 'table_config'>
+						<a href='page_visualizarConsole.php'>Ver Consoles</a>
 						<form action='../controller/cadastrar_jogo_usuario.php' method='post'>
 						<input type='submit' value='Adicionar'>	
 						<table border='1' width='80%'>
@@ -171,6 +172,7 @@
 				$tabela.= "</table>
 							<input type='submit' value='Adicionar'>	
 							</form>
+							<a href='page_visualizarConsole.php'>Ver Consoles</a>
 							 </div>";
 
 				echo $tabela;
@@ -253,6 +255,7 @@
 							<input type='submit' value='Remover'>	
 							<br/><br/>
 							<label>Caso queira remover, selecione o jogo na tabela</label>
+							
 							</form>
 							 </div>";
 

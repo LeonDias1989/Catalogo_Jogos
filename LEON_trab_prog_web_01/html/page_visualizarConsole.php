@@ -1,19 +1,18 @@
 <?php 
 
 	include "../html/header2.php";
-	include "../dao/JogoBD.class.php";
+	include "../dao/ConsoleBD.class.php";
 	require "../controller/validacao.php";
 	
  ?>
 
  	<main>
 
- 		
  		<?php 
 
- 			$JogoBD = new JogoBD();
+ 			$consoleBD = new ConsoleBD();
 
- 			$JogoBD->visualizar();
+ 			$consoleBD->visualizar();
  			
 
  		 ?>

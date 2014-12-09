@@ -24,7 +24,7 @@
 			}
 			else{
 				echo "<script>alert('ERRO     Não foi possível inserir!');</script>";
-				header("refresh:1; url=../html/inicial.php");
+				header("refresh:1; url=../html/page_visualizarJogo.php");
 			}
 
 
