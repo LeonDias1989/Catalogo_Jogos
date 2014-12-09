@@ -255,6 +255,8 @@
 							<input type='submit' value='Remover'>	
 							<br/><br/>
 							<label>Caso queira remover, selecione o jogo na tabela</label>
+							<br/><br/>
+							<a href='page_consoles.php'>Visualizar Meus Vídeo Games</a>
 							
 							</form>
 							 </div>";

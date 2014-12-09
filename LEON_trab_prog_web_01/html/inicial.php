@@ -18,7 +18,7 @@
 
 		 ?>
 		 <br/><br/><br/><br/><br/>
-		 <a href="page_consoles.php">Visualizar Meus Vídeo Games</a>
+		 
 
 	</main>
 
