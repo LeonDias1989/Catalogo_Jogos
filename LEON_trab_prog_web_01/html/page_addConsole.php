@@ -15,7 +15,7 @@
 					<fieldset>
 
 
-						<legend>Inclua um Vídeo Game</legend>
+						<legend>Cadastre um Novo Vídeo Game</legend>
 						<br/>
 						
 						<label for="nome">Nome</label>

@@ -18,8 +18,8 @@
 				
 				<ul>
 
-					<li><a href="../html/page_addJogo.php"/>ADD Jogo/Console</a></li>
-					<li><a href="../html/page_visualizarJogo.php"/>Jogos/Consoles</a></li>
+					<li><a href="../html/page_addJogo.php"/>Jogo/Console</a></li>
+					<li><a href="../html/page_visualizarJogo.php"/>ADD Jogo/Console</a></li>
 					<li><a href="inicial.php"/>Meus Jogos/VideoG.</a></li>
 					<li><a href="page_pesquisaJogo.php"/>Pesquisar</a></li>
 					<li><a href="../html/page_alterarDados.php">Alterar Meus Dados</a></li>

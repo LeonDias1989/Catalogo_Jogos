@@ -46,7 +46,7 @@
 
 
 					</form>
-					<a href="page_addConsole.php">Clique aqui para adicionar um novo Console</a>
+					<a href="page_addConsole.php">Clique aqui para cadastrar um novo Console</a>
 
 			</div>
 
