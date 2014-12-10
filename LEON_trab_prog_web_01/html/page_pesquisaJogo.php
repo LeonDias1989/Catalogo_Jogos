@@ -1,5 +1,6 @@
 <?php 
 
+	require "../controller/validacao.php";
 	include "header2.php"
 
 

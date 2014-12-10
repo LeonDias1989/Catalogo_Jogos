@@ -30,7 +30,7 @@
 		else{
 
 			echo "<script>alert('ERRO Usuário ou Senha Inválidos !');</script>";
-			header("refresh:1; url=../html/index.php");
+			header("refresh:1; url=../html/page_login_usuario.php");
 		}
 
 	}

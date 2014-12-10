@@ -29,7 +29,7 @@
 							<legend>Alterar Dados do Usuário</legend>
 
 							<label>Nome: </label>
-							<input type="text" id="nome" name="nome" placeholder= "<?php 
+							<input type="text" id="nome" name="nome" value= "<?php 
 
 								
 
@@ -40,7 +40,7 @@
 							<br><br>
 
 							<label>Sobrenome: </label>
-							<input type="text" id="sobrenome" name="sobrenome" placeholder = "<?php 
+							<input type="text" id="sobrenome" name="sobrenome" value = "<?php 
 
 								
 								echo $usuario->__get("sobrenome");
@@ -49,7 +49,7 @@
 							<br><br>
 
 							<label>Idade: </label>
-							<input type="text" id="idade" name="idade" placeholder = "<?php 
+							<input type="text" id="idade" name="idade" value = "<?php 
 
 
 
